@@ -2,8 +2,11 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var autoprefixer = require('gulp-autoprefixer');
 var clean = require('gulp-clean');
 var concat = require('gulp-concat');
+var browserify = require('gulp-browserify');
+var merge = require('merge-stream');
 
 var SOURCEPATH = {
     sassSource: 'src/scss/*.scss',
@@ -28,14 +31,20 @@ gulp.task('clean-scripts', function() {
 
 
 gulp.task('sass', function() {
-    return gulp.src(SOURCEPATH.sassSource)
+    var bootstrapCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.css');
+    var sassFiles;
+    sassFiles = gulp.src(SOURCEPATH.sassSource)
+    .pipe(autoprefixer())
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(gulp.dest(appPATH.css));
+    return merge(bootstrapCSS, sassFiles)
+        .pipe(concat('app.css'))
+        .pipe(gulp.dest(appPATH.css));
 });
 
 gulp.task('scripts', ['clean-scripts'], function() {
     gulp.src(SOURCEPATH.jsSource)
     .pipe(concat('main.js'))
+    .pipe(browserify())
     .pipe(gulp.dest(appPATH.js));
 });
 
