@@ -13277,9 +13277,6 @@ global.jQuery = require('jquery');
 bootstrap = require('bootstrap');
 mustache = require('mustache');
 
-jQuery(document).ready(function() {
-    alert('Hello');
-});
 
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
