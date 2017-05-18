@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var clean = require('gulp-clean');
+var concat = require('gulp-concat');
 
 var SOURCEPATH = {
     sassSource: 'src/scss/*.scss',
@@ -34,6 +35,7 @@ gulp.task('sass', function() {
 
 gulp.task('scripts', ['clean-scripts'], function() {
     gulp.src(SOURCEPATH.jsSource)
+    .pipe(concat('main.js'))
     .pipe(gulp.dest(appPATH.js));
 });
 
