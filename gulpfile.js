@@ -45,8 +45,8 @@ gulp.task('sass', function() {
     var bootstrapCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.css');
     var sassFiles;
     sassFiles = gulp.src(SOURCEPATH.sassSource)
-    .pipe(autoprefixer())
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(autoprefixer())
     return merge(bootstrapCSS, sassFiles)
         .pipe(concat('app.css'))
         .pipe(gulp.dest(appPATH.css));
