@@ -1,50 +1,138 @@
 <!-- partial:partials/_header.html -->
 <!-- partial -->
 
-        <div class="container">
-            <div class="row">
-                <div id="slider" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#slider" data-ride-to="0" class="active"></li>
-                        <li data-target="#slider" data-ride-to="1"></li>
-                    </ol>
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img src="http://placehold.it/1200x250.jpg">
-                    </div>
-                    <div class="item">
-                        <img src="http://placehold.it/1200x250.jpg">
-                    </div>
-                </div>
-                <a href="#slider" class="left carousel-control" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                </a>
-                <a href="#slider" class="right carousel-control" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                </a>
-                </div>
-            </div>
+
+        <div id="main-wrapper" style="padding: 30px;">
+
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div id="gallery" class="gallery">
+        <script type="text/babel">
+            var destination = document.querySelector("#main-wrapper");
+            var {
+                Router,
+                Route,
+                IndexRoute,
+                IndexLink,
+                hashHistory,
+                Link
+            } = ReactRouter;
 
-                </div>
-                <script id="template" type="x-tmpl-mustache">
-                    {{#gallery}}
-                        <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
-                                <img src="img/{{image}}"/>
-                            </div>
-                            <div class="caption">
-                                <h3 class="text-center">{{destiny}}</h3>
+            var Home = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                            <h2>HELLO</h2>
+                            <p>Cras facilisis urna ornare ex volutpat, et
+                            convallis erat elementum. Ut aliquam, ipsum vitae
+                            gravida suscipit, metus dui bibendum est, eget rhoncus nibh
+                            metus nec massa. Maecenas hendrerit laoreet augue
+                            nec molestie. Cum sociis natoque penatibus et magnis
+                            dis parturient montes, nascetur ridiculus mus.</p>
+  
+                            <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+                        </div>
+                    )
+                }
+            });
+            {/* Guitars Here */}
+            var Guitars = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                            <h2>Guitars</h2>
+                            <p>Here are some lovely guitars for you!</p>
+                        </div>
+                    );
+                }
+            });
+            {/* Basses here */}
+            var Basses = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                        <h2>GOT QUESTIONS?</h2>
+                        <p>The easiest thing to do is post on
+                        our <a href="http://forum.kirupa.com">forums</a>.
+                        </p>
+                        </div>
+                    );
+                }
+            });
+            {/* Used here */}
+            var Used = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                        <h2>Used Stuff</h2>
+                        <p>Things and stuff
+                        </p>
+                        <img src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                        </div>
+                    );
+                }
+            });
+            {/* About here */}
+            var About = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                        <h2>About Us</h2>
+                        <p>About us details and ting
+                        </p>
+                        </div>
+                    );
+                }
+            });
+            {/* Contact here */}
+            var Contact = React.createClass({
+                render: function() {
+                    return (
+                        <div>
+                        <h2>Drop us a line</h2>
+                        <p>Get in touch why not.
+                        </p>
+                        </div>
+                    );
+                }
+            });
+            var App = React.createClass({
+                render: function() {
+                    return(
+                        <div>
+                            <h1>Guitars Unlimited</h1>
+                            <ul className="main-nav no-padding no-margin">
+                                <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
+                                <li><Link to="/Guitars" activeClassName="active">Guitars</Link></li>
+                                <li><Link to="/Basses" activeClassName="active">Basses</Link></li>
+                                <li><Link to="/Used" activeClassName="active">Used</Link></li>
+                                <li><Link to="/About" activeClassName="active">About Us</Link></li>
+                                <li><Link to="/Contact" activeClassName="active">Contact Us</Link></li>
+                            </ul>
+                            <div className="content">
+                                {this.props.children}
+
                             </div>
                         </div>
-                    {{/gallery}}
-                </script>
-            </div>
-        </div>
+                    )
+                }
+            });
+
+            ReactDOM.render(
+            <Router history={ReactRouter.hashHistory}>
+                <Route path="/" component={App}>
+                <IndexRoute component={Home}/>
+                <Route path="Guitars" component={Guitars} />
+                <Route path="Basses" component={Basses} />
+                <Route path="Used" component={Used} />
+                <Route path="About" component={About} />
+                <Route path="Contact" component={Contact} />
+                </Route>
+            </Router>,
+            destination
+            );
+        </script>
+
+        
 <!-- partial:partials/_footer.html -->
 <!-- partial -->
 

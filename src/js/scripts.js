@@ -11,4 +11,11 @@ jQuery(document).ready(function($) {
         var showTemplate = mustache.render(template, data);
         $('#gallery').html(showTemplate);
     });
+
+
+    $('.nav-button').click(function(){
+        $('.main-nav').toggleClass('inPosition');
+        $('#main-wrapper').toggleClass('addMargin');
+    });
+
 });
