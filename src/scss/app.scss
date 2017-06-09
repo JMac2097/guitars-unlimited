@@ -17,9 +17,11 @@
 
 .main-nav {
     transition: all 0.3s ease-in-out;
-    transform: translate(-200px, 0);
+    position: absolute;
+    top: 20px;
+    left: -200px;
     &.inPosition {
-        transform: translate(0,0);
+        left: 10px;
     }
 }
 
