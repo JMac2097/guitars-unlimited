@@ -15,7 +15,7 @@ jQuery(document).ready(function($) {
 
     $('.nav-button').click(function(){
         var txt = $(this).text();
-        $(this).text('Menu' ? 'Close Menu' : 'Menu');
+        (txt === "Menu") ? $(this).text("Close Menu") : $(this).text("Menu");
         $('.main-nav').toggleClass('inPosition');
         $('#main-wrapper').toggleClass('addMargin');
     });
