@@ -1,3 +1,5 @@
+@import 'palette';
+
 .no-margin {
     margin: 0;
 }
@@ -13,13 +15,14 @@
     .nav-button {
         width: 100%;
         text-align: center;
-        color: #fff;
+        color: $color3;
         height: 100%;
-        background-color: green;
+        background-color: $color1;
         line-height: 50px;
+        color: $color4;
         &:hover {
             cursor: pointer;
-            background-color: yellow;
+            background-color: $color2;
         }
     }
 }
@@ -30,17 +33,20 @@
     top: 0;
     left: -200px;
     list-style: none;
-    box-shadow: 2px 2px 2px #000;
+    box-shadow: 2px 2px 2px $color2;
     border-radius: 0 0 10px 0;
     &.inPosition {
         left: 0;
     }
     li {
-        border: 2px solid #000;
+        border: 2px solid $color1;
         padding: 14px 20px;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba($color1,0.5);
+        &:hover {
+            border: 3px solid $color4;
+        }
         a {
-            color: #fff;
+            color: $color3;
         }
         &:last-child {
             border-radius: 0 0 10px 0;
