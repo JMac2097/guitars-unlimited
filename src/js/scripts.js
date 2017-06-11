@@ -14,8 +14,11 @@ jQuery(document).ready(function($) {
 
 
     $('.nav-button').click(function(){
+        var txt = $(this).text();
+        $(this).text('Menu' ? 'Close Menu' : 'Menu');
         $('.main-nav').toggleClass('inPosition');
         $('#main-wrapper').toggleClass('addMargin');
     });
 
 });
+
