@@ -1,10 +1,13 @@
 <!-- partial:partials/_header.html -->
 <!-- partial -->
 
+    <div class="container">
+        <div class="row">
+            <div id="main-wrapper" style="padding: 30px;">
 
-        <div id="main-wrapper" style="padding: 30px;">
-
+            </div>
         </div>
+    </div>
 
         <script type="text/babel">
             var destination = document.querySelector("#main-wrapper");
@@ -66,7 +69,11 @@
                         <h2>Used Stuff</h2>
                         <p>Things and stuff
                         </p>
-                        <img src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                        <div className="container">
+                            <div className="row">
+                                <img className="flex-img" src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                            </div>
+                        </div>
                         </div>
                     );
                 }
@@ -100,14 +107,17 @@
                     return(
                         <div>
                             <h1>Guitars Unlimited</h1>
-                            <ul className="main-nav no-padding no-margin">
-                                <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
-                                <li><Link to="/Guitars" activeClassName="active">Guitars</Link></li>
-                                <li><Link to="/Basses" activeClassName="active">Basses</Link></li>
-                                <li><Link to="/Used" activeClassName="active">Used</Link></li>
-                                <li><Link to="/About" activeClassName="active">About Us</Link></li>
-                                <li><Link to="/Contact" activeClassName="active">Contact Us</Link></li>
-                            </ul>
+                            <div className="main-nav">
+                                <ul className="no-padding no-margin">
+                                    <li><IndexLink to="/" activeClassName="active" data-role="page">Home</IndexLink></li>
+                                    <li><Link to="/Guitars" activeClassName="active" data-role="page">Guitars</Link></li>
+                                    <li><Link to="/Basses" activeClassName="active" data-role="page">Basses</Link></li>
+                                    <li><Link to="/Used" activeClassName="active" data-role="page">Used</Link></li>
+                                    <li><Link to="/About" activeClassName="active" data-role="page">About Us</Link></li>
+                                    <li><Link to="/Contact" activeClassName="active" data-role="page">Contact Us</Link></li>
+                                </ul>
+                                <div className="swipe-area"></div>
+                            </div>
                             <div className="content">
                                 {this.props.children}
 

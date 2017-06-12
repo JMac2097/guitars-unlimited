@@ -20,5 +20,24 @@ jQuery(document).ready(function($) {
         $('#main-wrapper').toggleClass('addMargin');
     });
 
+    $('.swipe-area').swipe({
+        swipeStatus:function(event, phase, direction, distance, duration, fingers)
+        {
+            if (phase=='move' && direction =='right') {
+                $('.main-nav').addClass('inPosition');
+                $('#main-wrapper').addClass('addMargin');
+                $('.nav-button').text("Close Menu");
+                return false;
+            }
+            if (phase=='move' && direction =='left') {
+                $('.main-nav').removeClass('inPosition');
+                $('#main-wrapper').removeClass('addMargin');
+                $('.nav-button').text("Menu");
+                return false;
+            }
+
+        }
+    })
+
 });
 
