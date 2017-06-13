@@ -1,10 +1,7 @@
 @import 'palette';
 
-body {
-    background-color: $color1;
-    #page-wrap {
-        background-color: $color3;
-    }
+html {
+    overflow-x: hidden;
 }
 
 .no-margin {
@@ -20,10 +17,16 @@ body {
     margin-bottom: 5px;
 }
 
-.flex-img {
-    width: 100%;
+body {
+    background-color: $color1;
+    #page-wrap {
+        background-color: $color3;
+    }
 }
 
+h1 {
+    margin: 15px;
+}
 
 .top-container {
     width: 100%;
@@ -54,7 +57,7 @@ body {
     width: 200px;
     z-index: 3;
     &.inPosition {
-        left: 0;
+        left: -40px;
     }
     li {
         border: 2px solid $color1;
@@ -88,22 +91,36 @@ body {
     }
 }
 
-.swipe-area {
-    width: 100%;
-    height: 30px;
-}
-
 #page-wrap {
     transition: all 0.3s ease-in-out;
     margin-left: 0;
+    position: relative;
+    left: 0;
     &.addMargin {
-        margin-left: 40px;
+        left: 40px;
     }
 }
-
-
 
 .footer-container {
     background-color: $color2;
     min-height: 30px;
+}
+
+//Responsive
+
+@media (max-width: 500px) {
+    .top-container {
+        position: fixed;
+        top: 0;
+        z-index: 3;
+    }
+
+    #page-wrap {
+        margin-top: 50px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
 }
