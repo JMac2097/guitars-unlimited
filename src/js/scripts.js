@@ -17,7 +17,7 @@ jQuery(document).ready(function($) {
         var txt = $(this).text();
         (txt === "Menu") ? $(this).text("Close Menu") : $(this).text("Menu");
         $('.main-nav').toggleClass('inPosition');
-        $('#main-wrapper').toggleClass('addMargin');
+        $('#page-wrap').toggleClass('addMargin');
     });
 
     $('.swipe-area').swipe({
@@ -25,13 +25,13 @@ jQuery(document).ready(function($) {
         {
             if (phase=='move' && direction =='right') {
                 $('.main-nav').addClass('inPosition');
-                $('#main-wrapper').addClass('addMargin');
+                $('#page-wrap').addClass('addMargin');
                 $('.nav-button').text("Close Menu");
                 return false;
             }
             if (phase=='move' && direction =='left') {
                 $('.main-nav').removeClass('inPosition');
-                $('#main-wrapper').removeClass('addMargin');
+                $('#page-wrap').removeClass('addMargin');
                 $('.nav-button').text("Menu");
                 return false;
             }

@@ -1,11 +1,23 @@
 @import 'palette';
 
+body {
+    background-color: $color1;
+    #page-wrap {
+        background-color: $color3;
+    }
+}
+
 .no-margin {
     margin: 0;
 }
 
 .no-padding{ 
     padding: 0;
+}
+
+.splitter {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .flex-img {
@@ -40,6 +52,7 @@
     box-shadow: 2px 2px 2px $color2;
     border-radius: 0 0 10px 0;
     width: 200px;
+    z-index: 3;
     &.inPosition {
         left: 0;
     }
@@ -60,6 +73,7 @@
             display: block;
             color: $color3;
             height: 48px;
+            line-height: 48px;
         }
         &:last-child {
             border-radius: 0 0 10px 0;
@@ -79,10 +93,17 @@
     height: 30px;
 }
 
-#main-wrapper {
+#page-wrap {
     transition: all 0.3s ease-in-out;
     margin-left: 0;
     &.addMargin {
         margin-left: 40px;
     }
+}
+
+
+
+.footer-container {
+    background-color: $color2;
+    min-height: 30px;
 }

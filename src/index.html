@@ -3,8 +3,10 @@
 <div id ="page-wrap">
     <div class="container">
         <div class="row">
+            <div class="header-container">
+                <h1>Guitars Unlimited</h1>
+            </div>
             <div id="main-wrapper" style="padding: 30px;">
-
             </div>
         </div>
     </div>
@@ -72,9 +74,16 @@
                         </p>
                         <div className="container">
                             <div className="row">
-                                <img className="flex-img" src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                                    <img className="col-xs-12 col-md-4 splitter" src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                                    <img className="col-xs-12 col-md-4 splitter" src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                                    <img className="col-xs-12 col-md-4 splitter" src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                                  </div>
+                                  <div className="row image-row">
+                                    <img className="col-xs-12 col-md-4 splitter" src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                                    <img className="col-xs-12 col-md-4 splitter" src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                                    <img className="col-xs-12 col-md-4 splitter" src ="https://s-media-cache-ak0.pinimg.com/originals/7b/11/db/7b11dbc298a59fb56ffec7889011e0a2.jpg" />
+                                    </div>
                             </div>
-                        </div>
                         </div>
                     );
                 }
@@ -107,7 +116,6 @@
                 render: function() {
                     return(
                         <div>
-                            <h1>Guitars Unlimited</h1>
                             <div className="main-nav">
                                 <ul className="no-padding no-margin">
                                     <li><IndexLink to="/" activeClassName="active" data-role="page">Home</IndexLink></li>
