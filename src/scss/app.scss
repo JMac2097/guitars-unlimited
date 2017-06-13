@@ -45,13 +45,21 @@
     }
     li {
         border: 2px solid $color1;
-        padding: 14px 20px;
+        padding: 0 20px;
         background-color: rgba($color1,0.5);
+        transition: all 0.5s ease-in-out;
         &:hover {
             border: 3px solid $color4;
+            background-color: rgba($color1,0.7);
+            a {
+                color: $color4;
+                text-decoration: none;
+            }
         }
         a {
+            display: block;
             color: $color3;
+            height: 48px;
         }
         &:last-child {
             border-radius: 0 0 10px 0;
@@ -61,8 +69,8 @@
         width: 100px;
         height: 100%;
         position: absolute;
-        right: -50px;
-        top: 0;
+        right: -75px;
+        top: 50px;
     }
 }
 
