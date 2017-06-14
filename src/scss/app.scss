@@ -21,6 +21,13 @@ body {
     margin-bottom: 5px;
 }
 
+h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid $color4;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+}
+
 #page-wrap {
     background-color: $color3;
     min-height: 500px;
@@ -33,7 +40,7 @@ body {
 
 .header-container {
     background-image: url(../img/header.jpg);
-    padding: 10px 30px;
+    padding: 10px 0;
     h1 {
         margin: 15px;
         color: $color3;
