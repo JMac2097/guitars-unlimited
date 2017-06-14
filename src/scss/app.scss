@@ -4,6 +4,10 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    background-color: $color5;
+}
+
 .no-margin {
     margin: 0;
 }
@@ -17,11 +21,9 @@ html {
     margin-bottom: 5px;
 }
 
-body {
-    background-color: $color1;
-    #page-wrap {
-        background-color: $color3;
-    }
+#page-wrap {
+    background-color: $color3;
+    min-height: 600px;
 }
 
 h1 {

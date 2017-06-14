@@ -63,30 +63,6 @@
                 render: function() {
                     return (
                         <div>
-                            <h2>Guitars</h2>
-                            <p>Here are some lovely guitars for you!</p>
-                        </div>
-                    );
-                }
-            });
-            {/* Basses here */}
-            var Basses = React.createClass({
-                render: function() {
-                    return (
-                        <div>
-                        <h2>GOT QUESTIONS?</h2>
-                        <p>The easiest thing to do is post on
-                        our <a href="http://forum.kirupa.com">forums</a>.
-                        </p>
-                        </div>
-                    );
-                }
-            });
-            {/* Used here */}
-            var Used = React.createClass({
-                render: function() {
-                    return (
-                        <div>
                         <h2>Used Stuff</h2>
                         <p>Things and stuff
                         </p>
@@ -113,10 +89,43 @@
                 render: function() {
                     return (
                         <div>
-                        <h2>About Us</h2>
-                        <p>About us details and ting
-                        </p>
+                        <h2>GOT QUESTIONS?</h2>
+                        <div className="col-xs-12 col-md-6">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                            Aliquam ultrices tempor suscipit. Integer aliquam magna a risus vehicula, 
+                            sit amet mattis quam placerat. Pellentesque quis orci consequat, fringilla 
+                            velit vel, dapibus odio. Duis vehicula, tortor eu porttitor bibendum, 
+                            ligula ipsum ultricies magna, sit amet tristique lectus metus in lacus. 
+                            Etiam feugiat nibh at sodales maximus. Sed et nisl eu nunc vehicula 
+                            posuere eget at lorem. Phasellus porta neque ac luctus convallis. 
+                            Ut varius consectetur lectus, nec vehicula lectus sollicitudin a. 
+                            Etiam sagittis finibus sapien, sed pulvinar ex viverra in. 
+                            Sed eu velit ac ligula aliquet mattis vitae ut dui. Etiam 
+                            scelerisque blandit purus, at elementum neque lobortis sit amet. 
+                            Mauris sagittis eros sapien, non hendrerit ipsum imperdiet et. 
+                            Duis nunc sem, auctor vel arcu et, rutrum vestibulum sapien. 
+                            Curabitur.</p>
                         </div>
+                        <div className="col-xs-12 col-md-6">
+                            <p>Vestibulum vel massa in purus iaculis faucibus. Morbi varius leo in 
+                            nisi elementum, in sagittis sapien dignissim. Aliquam erat volutpat. 
+                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+                            per inceptos himenaeos. Sed sagittis nisi sed sem eleifend rhoncus. 
+                            Nam mattis sit amet mauris vitae gravida. Fusce et mollis massa, 
+                            non vestibulum dolor. Morbi sem ante, vulputate quis aliquet a, 
+                            hendrerit vel dolor. Pellentesque posuere urna tellus, vel consectetur 
+                            sem vestibulum vitae.</p>
+                            <p>
+                            Fusce porttitor pretium lectus in viverra. Nunc quis cursus nunc. 
+                            Integer nisl augue, posuere at metus lacinia, facilisis fermentum 
+                            mauris. Nulla vitae sapien egestas arcu finibus viverra. Maecenas 
+                            interdum risus sed laoreet porttitor. Donec finibus placerat 
+                            mauris. Nam faucibus semper sagittis. Curabitur porta pulvinar 
+                            est, in consectetur sem elementum suscipit. Aenean pulvinar 
+                            ex eu augue finibus, id pellentesque lectus eleifend.</p>
+                        </div>
+                    </div>
+
                     );
                 }
             });
@@ -140,8 +149,6 @@
                                 <ul className="no-padding no-margin">
                                     <li><IndexLink to="/" activeClassName="active" data-role="page">Home</IndexLink></li>
                                     <li><Link to="/Guitars" activeClassName="active" data-role="page">Guitars</Link></li>
-                                    <li><Link to="/Basses" activeClassName="active" data-role="page">Basses</Link></li>
-                                    <li><Link to="/Used" activeClassName="active" data-role="page">Used</Link></li>
                                     <li><Link to="/About" activeClassName="active" data-role="page">About Us</Link></li>
                                     <li><Link to="/Contact" activeClassName="active" data-role="page">Contact Us</Link></li>
                                 </ul>
@@ -161,8 +168,6 @@
                 <Route path="/" component={App}>
                 <IndexRoute component={Home}/>
                 <Route path="Guitars" component={Guitars} />
-                <Route path="Basses" component={Basses} />
-                <Route path="Used" component={Used} />
                 <Route path="About" component={About} />
                 <Route path="Contact" component={Contact} />
                 </Route>
