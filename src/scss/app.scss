@@ -26,8 +26,16 @@ body {
     min-height: 600px;
 }
 
-h1 {
-    margin: 15px;
+.header-container {
+    background-image: url(../img/header.jpg);
+    padding: 10px 30px;
+    h1 {
+        margin: 15px;
+        color: $color3;
+        text-shadow: 2px 2px 2px $color2;
+        font-family: 'Anonymous Pro', monospace;
+        font-size: 2em;
+    }
 }
 
 .top-container {
@@ -100,6 +108,33 @@ h1 {
     left: 0;
     &.addMargin {
         left: 40px;
+    }
+}
+
+.form-container {
+    margin: 30px auto;
+    background-color: $color5;
+    max-width: 300px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px $color2;
+    padding: 20px 15px;
+    .email-details {
+        color: $color3;
+        span {
+            display: block;
+            color: $color4;
+            font-size: 1.5em;
+            text-align: center;
+        }
+    }
+    .phone-details {
+        color: $color3;
+        span {
+            display: block;
+            color: $color4;
+            font-size: 1.5em;
+            text-align: center;
+        }
     }
 }
 
